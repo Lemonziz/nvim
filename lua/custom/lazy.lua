@@ -1,5 +1,4 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   vim.fn.system({
     "git",
@@ -12,9 +11,4 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({
-	"catppuccin/nvim", name = "catppuccin", priority = 1000,
-    config = function()
-        vim.cmd([[colorscheme catppuccin-macchiato]])
-    end,
-})
+require("lazy").setup("custom.plugins")
