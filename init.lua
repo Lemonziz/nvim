@@ -1,3 +1,2 @@
-require("config")
-require("config.lazy")
-require("config.nvimrc")
+require("custom.core")
+require("custom.lazy")
