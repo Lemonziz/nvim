@@ -27,6 +27,7 @@ return {
 		mason_lspconfig.setup({
 			-- list of servers for mason to install
 			ensure_installed = {
+				"clangd",
 				"lua_ls",
 				"pyright",
 			},
@@ -34,6 +35,8 @@ return {
 
 		mason_tool_installer.setup({
 			ensure_installed = {
+				"codelldb",
+				"clang-format",
 				"prettier",
 				"stylua", -- lua formatter
 				"isort", -- python formatter
