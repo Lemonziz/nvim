@@ -14,6 +14,9 @@ vim.keymap.set("n", "<leader>tn", "<cmd>tabn<cr>", { desc = "Go to next tab" })
 vim.keymap.set("n", "<leader>tp", "<cmd>tabp<cr>", { desc = "Go to previous tab" })
 vim.keymap.set("n", "<leader>tf", "<cmd>tabnew %<cr>", { desc = "Open current buffer in new tab" })
 
+vim.keymap.set("n", "<leader>dm", "<cmd>make debug<cr>", { desc = "make debug" })
+vim.keymap.set("n", "<leader>dc", "<cmd>make clean<cr>", { desc = "make clean" })
+
 vim.keymap.set("t", "<ESC>", "<C-\\><C-n>", { desc = "Exit terminal mode with <ESC>" })
 --use C-j to switch to normal mode
 --vim.keymap.set('n', '<C-j>', '<ESC>')
