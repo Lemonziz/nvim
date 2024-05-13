@@ -30,11 +30,13 @@ return {
 				"clangd",
 				"lua_ls",
 				"pyright",
+				"cmake",
 			},
 		})
 
 		mason_tool_installer.setup({
 			ensure_installed = {
+				"cmakelang",
 				"codelldb",
 				"clang-format",
 				"prettier",
