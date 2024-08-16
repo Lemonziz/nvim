@@ -28,6 +28,11 @@ vim.keymap.set("t", "<ESC>", "<C-\\><C-n>", { desc = "Exit terminal mode with <E
 --vim.keymap.set('c', '<C-j>', '<ESC>')
 --vim.keymap.set('o', '<C-j>', '<ESC>')
 
+--Makefile shortcuts
+vim.keymap.set("n", "<leader>mk", '<cmd>make "%:r"<cr>', { desc = "make current file" })
+vim.keymap.set("n", "<leader>md", '<cmd>make "%:r.debug"<cr>', { desc = "make current debug file" })
+vim.keymap.set("n", "<leader>mc", "<cmd>make clean<cr>", { desc = "make clean the executable" })
+
 vim.keymap.set("n", "<leader>nh", "<cmd>nohl<cr>", { desc = "clear search highlight" })
 
 vim.keymap.set("n", "Q", "<nop>")
