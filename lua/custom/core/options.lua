@@ -16,7 +16,6 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.incsearch = true
 vim.opt.wrap = false
-
 vim.opt.clipboard:append("unnamedplus")
 vim.opt.mouse:append({ a = true })
 vim.opt.shortmess:append({ I = true })
