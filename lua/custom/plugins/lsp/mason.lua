@@ -38,12 +38,12 @@ return {
 			ensure_installed = {
 				"cmakelang",
 				"codelldb",
-				"clang-format",
+				-- "clang-format",
 				"prettier",
 				"stylua", -- lua formatter
 				"isort", -- python formatter
 				"black", -- python formatter
-				"pylint",
+				-- "pylint",
 				"eslint_d",
 			},
 		})
