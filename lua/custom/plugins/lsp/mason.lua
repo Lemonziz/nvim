@@ -31,6 +31,7 @@ return {
 				"lua_ls",
 				"pyright",
 				"cmake",
+				"matlab_ls",
 			},
 		})
 
