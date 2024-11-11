@@ -1,5 +1,3 @@
-vim.cmd("let g:netrw_liststyle = 3")
-
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.vb = false
@@ -21,3 +19,5 @@ vim.opt.mouse:append({ a = true })
 vim.opt.shortmess:append({ I = true })
 vim.opt.laststatus = 2
 vim.opt.backspace = { "indent", "eol", "start" }
+
+vim.cmd("let g:netrw_liststyle = 3")
