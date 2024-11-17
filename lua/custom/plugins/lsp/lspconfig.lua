@@ -80,7 +80,13 @@ return {
 			local hl = "DiagnosticSign" .. type
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 		end
-
+		vim.diagnostic.config({
+			virtual_text = false,
+			underline = true,
+			severity_sort = true,
+			signs = false,
+			update_in_insert = false,
+		})
 		mason_lspconfig.setup_handlers({
 			-- default handler for installed servers
 			function(server_name)
