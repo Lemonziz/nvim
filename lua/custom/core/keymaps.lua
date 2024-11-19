@@ -31,16 +31,36 @@ vim.keymap.set("t", "<ESC>", "<C-\\><C-n>", { desc = "Exit terminal mode with <E
 --vim.keymap.set('o', '<C-j>', '<ESC>')
 
 --Makefile shortcuts
-vim.keymap.set("n", "<leader>mb", "<cmd>!cmake --build build<cr>", { desc = "make current file" })
-vim.keymap.set("n", "<leader>md", '<cmd>make "%:r.debug"<cr>', { desc = "make current debug file" })
+-- vim.keymap.set("n", "<leader>mb", "<cmd>!cmake --build build<cr>", { desc = "make current file" })
+-- vim.keymap.set("n", "<leader>md", '<cmd>make "%:r.debug"<cr>', { desc = "make current debug file" })
+-- vim.keymap.set(
+-- 	"n",
+-- 	"<leader>mc",
+-- 	"<cmd>!cmake --build build --target clean<cr>",
+-- 	{ desc = "make clean the executable" }
+-- )
+-- vim.keymap.set("n", "<leader>ma", "<cmd>!cmake --build build && ./build/main<cr>", { desc = "run and build" })
+
+vim.keymap.set(
+	"n",
+	"<leader>cm",
+	"<cmd>!cd build && cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=on ..<cr>",
+	{ desc = "cmake and generate config file" }
+)
+vim.keymap.set("n", "<leader>mb", "<cmd>!make -C ./build --no-print-directory all<cr>", { desc = "make current file" })
 vim.keymap.set(
 	"n",
 	"<leader>mc",
-	"<cmd>!cmake --build build --target clean<cr>",
+	"<cmd>!make -C ./build --no-print-directory clean<cr>",
 	{ desc = "make clean the executable" }
 )
 vim.keymap.set("n", "<leader>mr", "<cmd>!./build/main<cr>", { desc = "make run the executable" })
-vim.keymap.set("n", "<leader>ma", "<cmd>!cmake --build build && ./build/main<cr>", { desc = "run and build" })
+vim.keymap.set(
+	"n",
+	"<leader>ma",
+	"<cmd>!make -C ./build all --no-print-directory && ./build/main<cr>",
+	{ desc = "run and build" }
+)
 
 vim.keymap.set("n", "<leader>nh", "<cmd>nohl<cr>", { desc = "clear search highlight" })
 
