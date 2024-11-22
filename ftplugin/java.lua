@@ -1,7 +1,7 @@
 local home = os.getenv("HOME")
 local jdtls_home = home .. "/.local/share/nvim/mason/packages/jdtls"
-local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
-local workspace_dir = home .. "/.local/share/nvim/jdtls_workspace/" .. project_name
+-- local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
+local workspace_dir = "jdtls_workspace"
 
 -- See `:help vim.lsp.start_client` for an overview of the supported `config` options.
 local config = {
