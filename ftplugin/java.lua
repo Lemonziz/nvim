@@ -1,4 +1,3 @@
-vim.uv.os_setenv("JAVA_HOME", "/usr/lib/jvm/java-17-openjdk-amd64")
 local home = os.getenv("HOME")
 local jdtls_home = home .. "/.local/share/nvim/mason/packages/jdtls"
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
