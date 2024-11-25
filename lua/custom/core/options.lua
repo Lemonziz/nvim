@@ -21,3 +21,4 @@ vim.opt.laststatus = 2
 vim.opt.backspace = { "indent", "eol", "start" }
 
 vim.cmd("let g:netrw_liststyle = 3")
+vim.cmd("au! BufNewFile,BufRead *.tpp set filetype=cpp")

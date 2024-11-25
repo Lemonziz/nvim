@@ -1,10 +1,8 @@
 vim.keymap.set("n", "<space>", "<Nop>", { silent = true })
 vim.g.mapleader = " "
 
-vim.keymap.set("n", "<leader>stv", "<cmd>rightb vsplit +term<cr>", { desc = "Split terminal right" })
-vim.keymap.set("n", "<leader>sth", "<cmd>rightb split +term<cr>", { desc = "Split terminal below" })
-vim.keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })
-vim.keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" })
+vim.keymap.set("n", "<leader>sh", "<C-w>v", { desc = "Split window horizontally" })
+vim.keymap.set("n", "<leader>sv", "<C-w>s", { desc = "Split window vertically" })
 vim.keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make split equal size" })
 vim.keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" }) -- close current split window
 vim.keymap.set("n", "<leader>ww", "<cmd>set wrap<CR>", { desc = "Toggle wrap" })
