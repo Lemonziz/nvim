@@ -56,8 +56,14 @@ vim.keymap.set("n", "<leader>mr", "<cmd>!./build/main<cr>", { desc = "make run t
 vim.keymap.set(
 	"n",
 	"<leader>ma",
-	"<cmd>!make -C ./build all --no-print-directory && ./build/main<cr>",
+	"<cmd>!make -C ./build --no-print-directory && ./build/main<cr>",
 	{ desc = "run and build" }
+)
+vim.keymap.set(
+	"n",
+	"<leader>mt",
+	"<cmd>!make -C ./build --no-print-directory && ./build/test<cr>",
+	{ desc = "make test" }
 )
 
 vim.keymap.set("n", "<leader>nh", "<cmd>nohl<cr>", { desc = "clear search highlight" })
