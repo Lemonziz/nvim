@@ -33,11 +33,13 @@ return {
 				"cmake",
 				"matlab_ls",
 				"texlab",
+				"bashls",
 			},
 		})
-
 		mason_tool_installer.setup({
 			ensure_installed = {
+				"shellcheck",
+				"shfmt",
 				"cmakelang",
 				"codelldb",
 				"clang-format",

@@ -99,6 +99,12 @@ return {
 					capabilities = capabilities,
 				})
 			end,
+			["bashls"] = function()
+				lspconfig["bashls"].setup({
+					capabilities = capabilities,
+					filetypes = { "zsh", "sh", "bash" },
+				})
+			end,
 			-- ["svelte"] = function()
 			--   -- configure svelte server
 			--   lspconfig["svelte"].setup({
