@@ -42,7 +42,7 @@ vim.keymap.set("t", "<ESC>", "<C-\\><C-n>", { desc = "Exit terminal mode with <E
 vim.keymap.set(
 	"n",
 	"<leader>cm",
-	"<cmd>!cd build && cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=on ..<cr>",
+	"<cmd>!mkdir -p build && cd build && cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=on ..<cr>",
 	{ desc = "cmake and generate config file" }
 )
 vim.keymap.set("n", "<leader>mb", "<cmd>!make -C ./build --no-print-directory all<cr>", { desc = "make current file" })
