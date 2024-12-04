@@ -9,9 +9,10 @@ return {
 				return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
 			end
 
-			api.config.mappings.default_on_attach(bufnr)
 			-- remove a default
+			api.config.mappings.default_on_attach(bufnr)
 			vim.keymap.del("n", "<C-k>", { buffer = bufnr })
+			vim.keymap.set("n", "<C-o>", api.node.show_info_popup, opts("Info"))
 		end
 
 		-- recommended settings from nvim-tree documentation

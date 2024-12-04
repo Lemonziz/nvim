@@ -18,26 +18,6 @@ vim.keymap.set("n", "<leader>dm", "<cmd>make debug<cr>", { desc = "make debug" }
 vim.keymap.set("n", "<leader>dc", "<cmd>make clean<cr>", { desc = "make clean" })
 
 vim.keymap.set("t", "<ESC>", "<C-\\><C-n>", { desc = "Exit terminal mode with <ESC>" })
---use C-j to switch to normal mode
---vim.keymap.set('n', '<C-j>', '<ESC>')
---vim.keymap.set('i', '<C-j>', '<ESC>')
---vim.keymap.set('v', '<C-j>', '<ESC>')
---vim.keymap.set('l', '<C-j>', '<ESC>')
---vim.keymap.set('x', '<C-j>', '<ESC>')
---vim.keymap.set('s', '<C-j>', '<ESC>')
---vim.keymap.set('c', '<C-j>', '<ESC>')
---vim.keymap.set('o', '<C-j>', '<ESC>')
-
---Makefile shortcuts
--- vim.keymap.set("n", "<leader>mb", "<cmd>!cmake --build build<cr>", { desc = "make current file" })
--- vim.keymap.set("n", "<leader>md", '<cmd>make "%:r.debug"<cr>', { desc = "make current debug file" })
--- vim.keymap.set(
--- 	"n",
--- 	"<leader>mc",
--- 	"<cmd>!cmake --build build --target clean<cr>",
--- 	{ desc = "make clean the executable" }
--- )
--- vim.keymap.set("n", "<leader>ma", "<cmd>!cmake --build build && ./build/main<cr>", { desc = "run and build" })
 
 vim.keymap.set(
 	"n",
