@@ -8,7 +8,7 @@ vim.keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current spli
 vim.keymap.set("n", "<leader>ww", "<cmd>set wrap<CR>", { desc = "Toggle wrap" })
 vim.keymap.set("n", "<leader>nw", "<cmd>set nowrap<CR>", { desc = "Toggle nowrap" })
 
-vim.keymap.set("n", "<leader>to", "<cmd>tabnew<cr>", { desc = "Open new tab" })
+vim.keymap.set("n", "<leader>tc", "<cmd>tabnew<cr>", { desc = "Open new tab" })
 vim.keymap.set("n", "<leader>tx", "<cmd>tabclose<cr>", { desc = "Close current tab" })
 vim.keymap.set("n", "<leader>tn", "<cmd>tabn<cr>", { desc = "Go to next tab" })
 vim.keymap.set("n", "<leader>tp", "<cmd>tabp<cr>", { desc = "Go to previous tab" })
