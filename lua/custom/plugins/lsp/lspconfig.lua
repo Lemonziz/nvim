@@ -2,10 +2,11 @@ return {
 	"neovim/nvim-lspconfig",
 	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
+		"williamboman/mason.nvim", -- Add mason as dependency
+		"williamboman/mason-lspconfig.nvim",
 		"hrsh7th/cmp-nvim-lsp",
 		{ "antosha417/nvim-lsp-file-operations", config = true },
 		{ "folke/neodev.nvim", opts = {} },
-		{ "nvim-java/nvim-java" },
 	},
 	config = function()
 		-- import lspconfig plugin
@@ -24,6 +25,7 @@ return {
 			cmd = { "clangd", "--completion-style=detailed" },
 		})
 
+		require("java").setup({})
 		lspconfig.jdtls.setup({})
 
 		vim.api.nvim_create_autocmd("LspAttach", {
@@ -95,9 +97,6 @@ return {
 		mason_lspconfig.setup_handlers({
 			-- default handler for installed servers
 			function(server_name)
-				if server_name == "jdtls" then
-					return
-				end
 				lspconfig[server_name].setup({
 					capabilities = capabilities,
 				})
