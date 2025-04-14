@@ -5,6 +5,7 @@ return {
 		"hrsh7th/cmp-nvim-lsp",
 		{ "antosha417/nvim-lsp-file-operations", config = true },
 		{ "folke/neodev.nvim", opts = {} },
+		{ "nvim-java/nvim-java" },
 	},
 	config = function()
 		-- import lspconfig plugin
@@ -22,6 +23,8 @@ return {
 		lspconfig.clangd.setup({
 			cmd = { "clangd", "--completion-style=detailed" },
 		})
+
+		lspconfig.jdtls.setup({})
 
 		vim.api.nvim_create_autocmd("LspAttach", {
 			group = vim.api.nvim_create_augroup("UserLspConfig", {}),
