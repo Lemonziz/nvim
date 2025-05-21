@@ -31,7 +31,7 @@ return {
 				"graphql",
 				"lua_ls",
 				"cmake",
-				"matlab_ls",
+				-- "matlab_ls",
 				"texlab",
 				"bashls",
 			},
