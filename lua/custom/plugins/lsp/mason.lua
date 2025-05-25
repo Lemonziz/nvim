@@ -43,6 +43,7 @@ return {
 				"cmakelang",
 				"codelldb",
 				"clang-format",
+				"clangd",
 				"prettier",
 				"stylua", -- lua formatter
 				"isort", -- python formatter

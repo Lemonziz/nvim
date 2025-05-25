@@ -10,14 +10,12 @@ return {
 	},
 	config = function()
 		-- import lspconfig plugin
-		local lspconfig = require("lspconfig")
-
 		local keymap = vim.keymap -- for conciseness
 
-		-- do not use clangd by mason may have bugs with that
-		lspconfig.clangd.setup({
-			cmd = { "clangd", "--completion-style=detailed" },
-		})
+		-- -- do not use clangd by mason may have bugs with that
+		-- lspconfig.clangd.setup({
+		-- 	cmd = { "clangd", "--completion-style=detailed" },
+		-- })
 
 		vim.api.nvim_create_autocmd("LspAttach", {
 			group = vim.api.nvim_create_augroup("UserLspConfig", {}),
