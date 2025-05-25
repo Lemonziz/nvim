@@ -7,7 +7,8 @@ return {
 		conform.setup({
 			formatters_by_ft = {
 				python = { "isort", "black" },
-				cpp = { "clang-format" },
+				cpp = { "clang_format" },
+				c = { "clang_format" },
 				javascript = { "prettier" },
 				typescript = { "prettier" },
 				javascriptreact = { "prettier" },
@@ -25,6 +26,14 @@ return {
 			format_on_save = {
 				timeout_ms = 500,
 				lsp_format = "fallback",
+			},
+			formatters = {
+				clang_format = {
+					prepend_args = {
+						"--style=file:" .. vim.fn.expand("~/.cfg/cfgfiles/.clang-format"),
+						"--fallback-style=LLVM",
+					},
+				},
 			},
 		})
 
