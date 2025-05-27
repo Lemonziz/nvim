@@ -6,6 +6,10 @@ return {
 
 		conform.setup({
 			formatters_by_ft = {
+				-- bash zsh sh format
+				bash = { "shfmt" },
+				sh = { "shfmt" },
+				zsh = { "shfmt" },
 				python = { "isort", "black" },
 				cpp = { "clang_format" },
 				c = { "clang_format" },
