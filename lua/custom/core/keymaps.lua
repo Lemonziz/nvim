@@ -4,7 +4,8 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>|", "<C-w>v", { desc = "Split window horizontally" })
 vim.keymap.set("n", "<leader>-", "<C-w>s", { desc = "Split window vertically" })
 vim.keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make split equal size" })
-vim.keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" }) -- close current split window
+
+vim.keymap.set("n", "<leader>x", "<cmd>close<CR>", { desc = "Close current window" })
 vim.keymap.set("n", "<leader>w", "<cmd>set wrap!<CR>", { desc = "Toggle wrap" })
 
 vim.keymap.set("n", "<leader>tc", "<cmd>tabnew<cr>", { desc = "Open new tab" })
@@ -12,9 +13,6 @@ vim.keymap.set("n", "<leader>tx", "<cmd>tabclose<cr>", { desc = "Close current t
 vim.keymap.set("n", "<leader>tn", "<cmd>tabn<cr>", { desc = "Go to next tab" })
 vim.keymap.set("n", "<leader>tp", "<cmd>tabp<cr>", { desc = "Go to previous tab" })
 vim.keymap.set("n", "<leader>tf", "<cmd>tabnew %<cr>", { desc = "Open current buffer in new tab" })
-
-vim.keymap.set("n", "<leader>dm", "<cmd>make debug<cr>", { desc = "make debug" })
-vim.keymap.set("n", "<leader>dc", "<cmd>make clean<cr>", { desc = "make clean" })
 
 vim.keymap.set("t", "<ESC>", "<C-\\><C-n>", { desc = "Exit terminal mode with <ESC>" })
 
