@@ -10,12 +10,11 @@ return {
 		local dap, dapui = require("dap"), require("dapui")
 		dapui.setup()
 		dap.adapters.codelldb = {
-			type = "server",
-			port = "${port}",
-			executable = {
-				command = "/home/ziqi/.local/share/nvim/mason/bin/codelldb",
-				args = { "--port", "${port}" },
-			},
+			type = "executable",
+			command = vim.env.HOME .. "/.local/share/nvim/mason/bin/codelldb",
+
+			-- On windows you may have to uncomment this:
+			-- detached = false,
 		}
 		dap.configurations.cpp = {
 			{
@@ -29,11 +28,10 @@ return {
 				stopOnEntry = false,
 			},
 		}
-
 		dap.configurations.c = dap.configurations.cpp
 		dap.configurations.rust = dap.configurations.cpp
 
-		require("dap-python").setup("~/.virtualenvs/debugpy/bin/python")
+		require("dap-python").setup()
 
 		dap.listeners.before.attach.dapui_config = function()
 			dapui.open()
