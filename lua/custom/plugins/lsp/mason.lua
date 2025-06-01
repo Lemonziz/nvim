@@ -34,7 +34,7 @@ return {
 				-- "matlab_ls",
 				"texlab",
 				"bashls",
-				"asm_lsp",
+				-- "asm_lsp",
 			},
 		})
 		mason_tool_installer.setup({
