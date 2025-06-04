@@ -64,17 +64,5 @@ return {
 			signs = false,
 			update_in_insert = false,
 		})
-		vim.lsp.config("bashls", {
-			filetypes = { "zsh", "sh", "bash" },
-		})
-		vim.lsp.config("lua_ls", {
-			settings = {
-				["Lua"] = {
-					diagnostics = {
-						globals = { "vim" },
-					},
-				},
-			},
-		})
 	end,
 }
