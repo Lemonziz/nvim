@@ -19,6 +19,7 @@ vim.opt.mouse:append({ a = true })
 vim.opt.shortmess:append({ I = true })
 vim.opt.laststatus = 2
 vim.opt.backspace = { "indent", "eol", "start" }
+vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
 vim.cmd("let g:netrw_liststyle = 3")
 vim.cmd("au! BufNewFile,BufRead *.tpp set filetype=cpp")
